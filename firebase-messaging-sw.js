@@ -13,7 +13,7 @@ const messaging = firebase.messaging()
 
 messaging.setBackgroundMessageHandler(payload => {
     console.log(payload);
-    const notification = JSON.parse(payload.data.notification)
+    const notification = JSON.parse(payload.data['gcm.notification.data'])
     const notificationTitle = notification.title
     const notificationOptions = {
         body: notification.body,
