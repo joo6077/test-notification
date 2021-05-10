@@ -24,8 +24,12 @@ messaging.setBackgroundMessageHandler(payload => {
     //     notificationTitle,
     //     notificationOptions
     // )
+    alert('hello')
     return self.registration.showNotification(
         notificationTitle,
         notificationOptions,
     )
+})
+self.onnotificationclick(event => {
+    console.log('event', event)
 })
